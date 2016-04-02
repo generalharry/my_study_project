@@ -1,0 +1,19 @@
+Makefile:6: >>> harry debug build list module
+make -C /usr/src/linux-headers-4.2.0-34-generic M=/home/harry/kernel_code/linux-4.1/drivers/misc/mediatek/project/timer modules
+make[1]: 正在进入目录 `/usr/src/linux-headers-4.2.0-34-generic'
+/home/harry/kernel_code/linux-4.1/drivers/misc/mediatek/project/timer/Makefile:6: >>> harry debug build list module
+  CC [M]  /home/harry/kernel_code/linux-4.1/drivers/misc/mediatek/project/timer/timer.o
+/home/harry/kernel_code/linux-4.1/drivers/misc/mediatek/project/timer/timer.c: In function ‘time_out_function’:
+/home/harry/kernel_code/linux-4.1/drivers/misc/mediatek/project/timer/timer.c:9:2: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘long unsigned int’ [-Wformat=]
+  printk("call timeout %d\n", data);
+  ^
+/home/harry/kernel_code/linux-4.1/drivers/misc/mediatek/project/timer/timer.c: In function ‘timer_init’:
+/home/harry/kernel_code/linux-4.1/drivers/misc/mediatek/project/timer/timer.c:20:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+  Building modules, stage 2.
+/home/harry/kernel_code/linux-4.1/drivers/misc/mediatek/project/timer/Makefile:6: >>> harry debug build list module
+  MODPOST 1 modules
+  CC      /home/harry/kernel_code/linux-4.1/drivers/misc/mediatek/project/timer/timer.mod.o
+  LD [M]  /home/harry/kernel_code/linux-4.1/drivers/misc/mediatek/project/timer/timer.ko
+make[1]:正在离开目录 `/usr/src/linux-headers-4.2.0-34-generic'
