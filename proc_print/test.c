@@ -11,6 +11,7 @@ static int __init test_init(void)
 	pDebug = INIT_PROC_PRINT("testcase 01");
 	pDebug1 = INIT_PROC_PRINT("testcase 02");
 
+<<<<<<< HEAD
 	proc_printf(pDebug, strlen("test case 1\n") + 1, "test case 1\n");
 	proc_printf(pDebug, strlen("test case 1\n") + 1, "test case 1\n");
 	proc_printf(pDebug, strlen("test case 1\n") + 1, "test case 1\n");
@@ -24,6 +25,21 @@ static int __init test_init(void)
 	proc_printf(pDebug1, strlen("test case 2\n") + 1, "test case 2\n");
 	proc_printf(pDebug1, strlen("test case 2\n") + 1, "test case 2\n");
 	proc_printf(pDebug1, strlen("test case 2\n") + 1, "test case 2\n");
+=======
+	pDebug->proc_printf(pDebug, strlen("test case 1\n") + 1, "test case 1\n");
+	pDebug->proc_printf(pDebug, strlen("test case 1\n") + 1, "test case 1\n");
+	pDebug->proc_printf(pDebug, strlen("test case 1\n") + 1, "test case 1\n");
+	pDebug->proc_printf(pDebug, strlen("test case 1\n") + 1, "test case 1\n");
+	pDebug->proc_printf(pDebug, strlen("test case 1\n") + 1, "test case 1\n");
+	pDebug->proc_printf(pDebug, strlen("test case 1\n") + 1, "test case 1\n");
+	pDebug->proc_printf(pDebug, strlen("test case 1\n") + 1, "test case 1\n");
+
+	pDebug->proc_printf(pDebug1, strlen("test case 2\n") + 1, "test case 2\n");
+	pDebug->proc_printf(pDebug1, strlen("test case 2\n") + 1, "test case 2\n");
+	pDebug->proc_printf(pDebug1, strlen("test case 2\n") + 1, "test case 2\n");
+	pDebug->proc_printf(pDebug1, strlen("test case 2\n") + 1, "test case 2\n");
+	pDebug->proc_printf(pDebug1, strlen("test case 2\n") + 1, "test case 2\n");
+>>>>>>> 9c6b2ac6dd068616a74b3cc0ba02a3a9832406e9
 }
 
 static void __exit test_exit(void)

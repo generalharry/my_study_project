@@ -54,6 +54,10 @@ struct proc_debug *INIT_PROC_PRINT(char *name)
 	
 	memset(pDebug, 0, sizeof(struct proc_debug));	
 	list_add_tail(&pDebug->list, &gProcPrintListHead);
+<<<<<<< HEAD
+=======
+	pDebug->proc_printf = proc_printf;
+>>>>>>> 9c6b2ac6dd068616a74b3cc0ba02a3a9832406e9
 	pDebug->printBuffer = vmalloc(PAGESIZE);
 	if (!pDebug->printBuffer)
 		return NULL;
@@ -66,9 +70,19 @@ EXPORT_SYMBOL(INIT_PROC_PRINT);
 
 void proc_print_remove(struct proc_debug *pDebug)
 {
+<<<<<<< HEAD
 	list_del(&pDebug->list);
 	vfree(pDebug->printBuffer);
 	vfree(pDebug);
+=======
+	printk("jiaguang %d\n", __LINE__);
+	list_del(&pDebug->list);
+	printk("jiaguang %d\n", __LINE__);
+	vfree(pDebug->printBuffer);
+	printk("jiaguang %d\n", __LINE__);
+	vfree(pDebug);
+	printk("jiaguang %d\n", __LINE__);
+>>>>>>> 9c6b2ac6dd068616a74b3cc0ba02a3a9832406e9
 	return;
 }
 EXPORT_SYMBOL(proc_print_remove);
