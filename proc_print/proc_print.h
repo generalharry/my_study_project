@@ -6,10 +6,6 @@
 struct proc_debug {
 	struct list_head list;
 	char name[MAX_LEN];
-<<<<<<< HEAD
-=======
-	void (*proc_printf) (struct proc_debug *debug, char *fmt, ...);
->>>>>>> 9c6b2ac6dd068616a74b3cc0ba02a3a9832406e9
 	char *printBuffer;
 	unsigned int bufferSize;	// total buffer size of printBuffer
 	unsigned int count;			// current buffer size
